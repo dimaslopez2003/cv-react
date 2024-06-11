@@ -1,11 +1,27 @@
-.App {
-  text-align: center;
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.MuiDrawer-paper {
+  width: 240px;
 }
+
+.MuiContainer-root {
+  padding-top: 20px;
+}
+
+.MuiPaper-root {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MuiPaper-root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +51,17 @@
   to {
     transform: rotate(360deg);
   }
+  
+}
+.section {
+  margin-bottom: 40px;
+}
+
+.section .MuiPaper-root {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section .MuiPaper-root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }

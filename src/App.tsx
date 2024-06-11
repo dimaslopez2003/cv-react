@@ -1,24 +1,19 @@
 // src/App.tsx
 import React from 'react';
+import { Box, Container } from '@mui/material';
 import Header from './Componentes/Header';
-import Profile from './Componentes/Profile';
-import Experience from './Componentes/Experience';
-import Education from './Componentes/Education';
-import { Container } from '@mui/material';
-import Contact from './Componentes/Contact';
-import Skills from './Componentes/Skills';
+import ProfileCard from './Componentes/ProfileCard';
+import AboutMe from './Componentes/AboutMe';
+import Footer from './Componentes/Footer';
+import './App.css';
 
 const App: React.FC = () => {
   return (
     <div>
       <Header />
-      <Container>
-        <Profile />
-        <Experience />
-        <Education />
-        <Contact/>
-        <Skills/>
-      </Container>
+      <ProfileCard />
+      <AboutMe />
+      <Footer />
     </div>
   );
 };

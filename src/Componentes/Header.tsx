@@ -1,18 +1,20 @@
 // src/components/Header.tsx
 import React from 'react';
-import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
 
 const Header: React.FC = () => {
   return (
-    <AppBar position="static">
+    <AppBar sx={{ backgroundColor: "#0F73D8", color: "#fff" }} position="static">
       <Toolbar>
-        <IconButton edge="start" color="inherit" aria-label="menu">
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6">
-          Tu Nombre
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          Dimas Lopez
         </Typography>
+        <Box>
+          <Button sx={{ color: "#fff" }}>Education</Button>
+          <Button sx={{ color: "#fff" }}>Experience</Button>
+          <Button sx={{ color: "#fff" }}>Skills</Button>
+          <Button sx={{ color: "#fff" }}>Contact</Button>
+        </Box>
       </Toolbar>
     </AppBar>
   );
