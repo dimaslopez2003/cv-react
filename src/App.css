@@ -2,14 +2,11 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-}
-
-.MuiDrawer-paper {
-  width: 240px;
+  background-color: #f9f9f9;
 }
 
 .MuiContainer-root {
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .MuiPaper-root {
@@ -20,6 +17,18 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
+
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.ContentContainer {
+  flex-grow: 1;
+  padding-bottom: 50px; /* Añadir padding inferior para asegurar separación */
+}
+
 
 
 

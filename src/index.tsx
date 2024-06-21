@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Educacion from './Componentes/Educacion';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Experiencia from './Componentes/Experiencia';
 
 
 const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/educacion",
     element: <Educacion />,
+  },
+  {
+    path: "/experiencia",
+    element: <Experiencia />,
   },
 ]);
 

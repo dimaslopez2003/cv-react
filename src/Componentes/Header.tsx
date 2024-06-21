@@ -7,11 +7,11 @@ const Header: React.FC = () => {
     <AppBar sx={{ backgroundColor: "#0F73D8", color: "#fff" }} position="static">
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          Curriculum Vitae
+          <Button sx={{ color: "#fff" }} component={Link} to="/">Curriculum Vitae</Button>
         </Typography>
         <Box>
-          <Button sx={{ color: "#fff" }} component={Link} to="/educacion">Educacion</Button>
-          <Button sx={{ color: "#fff" }} component={Link} to="/experience">Experiencia</Button>
+          <Button sx={{ color: "#fff" }} component={Link} to="/Educacion">Educacion</Button>
+          <Button sx={{ color: "#fff" }} component={Link} to="/Experiencia">Experiencia</Button>
           <Button sx={{ color: "#fff" }} component={Link} to="/skills">Skills</Button>
           <Button sx={{ color: "#fff" }} component={Link} to="/certificates">Certificados</Button>
           <Button sx={{ color: "#fff" }} component={Link} to="/contact">Contacto</Button>
