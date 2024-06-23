@@ -7,14 +7,15 @@ const Header: React.FC = () => {
     <AppBar sx={{ backgroundColor: "#0F73D8", color: "#fff" }} position="static">
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          <Button sx={{ color: "#fff" }} component={Link} to="/">Curriculum Vitae</Button>
+          Curriculum Vitae
         </Typography>
         <Box>
-          <Button sx={{ color: "#fff" }} component={Link} to="/Educacion">Educacion</Button>
-          <Button sx={{ color: "#fff" }} component={Link} to="/Experiencia">Experiencia</Button>
-          <Button sx={{ color: "#fff" }} component={Link} to="/skills">Skills</Button>
-          <Button sx={{ color: "#fff" }} component={Link} to="/certificates">Certificados</Button>
-          <Button sx={{ color: "#fff" }} component={Link} to="/contact">Contacto</Button>
+          <Button component={Link} to="/" sx={{ color: "#fff" }}>Home</Button>
+          <Button component={Link} to="/Educacion" sx={{ color: "#fff" }}>Educacion</Button>
+          <Button component={Link} to="/Experiencia" sx={{ color: "#fff" }}>Experiencia</Button>
+          <Button component={Link} to="/Skills" sx={{ color: "#fff" }}>Skills</Button>
+          <Button component={Link} to="/Certificados" sx={{ color: "#fff" }}>Certificados</Button>
+          <Button component={Link} to="/Contacto" sx={{ color: "#fff" }}>Contacto</Button>
         </Box>
       </Toolbar>
     </AppBar>

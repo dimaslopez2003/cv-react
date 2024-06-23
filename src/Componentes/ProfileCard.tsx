@@ -60,7 +60,7 @@ const ProfileCard: React.FC = () => {
           <ProfileContainer id="profile">
             <Grid container spacing={2} alignItems="center" justifyContent="center">
               <Grid item xs={12} textAlign="center">
-                <ProfileAvatar alt="Dimas Arturo López Montalvo" src="/img/yo.png" />
+                <ProfileAvatar alt="Dimas Arturo López Montalvo" src="https://lh3.googleusercontent.com/a/ACg8ocJrZ30RUnDhaEmusJW-z06-kA5DBrO6rzCH_FdlRJ-0EpbUiXnPqg=s288-c-no" />
               </Grid>
               <Grid item xs={12}>
                 <Typography variant="h4">Dimas Arturo López Montalvo</Typography>
