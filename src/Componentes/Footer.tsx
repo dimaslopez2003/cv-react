@@ -12,34 +12,48 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   padding: '20px 0',
   textAlign: 'center',
   marginTop: 'auto',
+  position: 'relative', // Asegura que el footer esté en la parte inferior
+  bottom: 0,
   width: '100%',
+}));
+
+const SocialMediaIcons = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '15px',
+  marginBottom: '10px',
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column',
+    gap: '10px',
+  },
+}));
+
+const Links = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '20px',
+  marginBottom: '10px',
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column',
+    gap: '10px',
+  },
 }));
 
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
-      <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} sm={6} md={4} textAlign="center">
-          <Box>
-            <IconButton href="https://www.facebook.com/arturo.montalvo.3954" sx={{ color: '#fff' }}><FacebookIcon /></IconButton>
-            <IconButton href="https://www.instagram.com/arturomontalvo2003/" sx={{ color: '#fff' }}><InstagramIcon /></IconButton>
-            <IconButton href="https://www.linkedin.com/in/dimas-arturo-l%C3%B3pez-montalvo-7701bb285/" sx={{ color: '#fff' }}><LinkedInIcon /></IconButton>
-            <IconButton href="#" sx={{ color: '#fff' }}><WhatsAppIcon /></IconButton>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} textAlign="center">
-          <Box>
-            <Link href="/" color="inherit" sx={{ display: 'block', marginBottom: '10px' }}>Home</Link>
-            <Link href="#about" color="inherit" sx={{ display: 'block', marginBottom: '10px' }}>About</Link>
-            <Link href="#contact" color="inherit" sx={{ display: 'block', marginBottom: '10px' }}>Contacto</Link>
-          </Box>
-        </Grid>
-        <Grid item xs={12} textAlign="center">
-          <Typography variant="body2">
-            Copyright ©2024; By Dimas Arturo Lopez Montalvo with REACT.JS
-          </Typography>
-        </Grid>
-      </Grid>
+      <SocialMediaIcons>
+        <IconButton href="https://www.facebook.com/arturo.montalvo.3954" sx={{ color: '#fff' }}><FacebookIcon /></IconButton>
+        <IconButton href="https://www.instagram.com/arturomontalvo2003/" sx={{ color: '#fff' }}><InstagramIcon /></IconButton>
+        <IconButton href="https://www.linkedin.com/in/dimas-arturo-l%C3%B3pez-montalvo-7701bb285/" sx={{ color: '#fff' }}><LinkedInIcon /></IconButton>
+        <IconButton href="#" sx={{ color: '#fff' }}><WhatsAppIcon /></IconButton>
+      </SocialMediaIcons>
+      <Links>
+        <Link href="/" color="inherit">Home</Link>
+        <Link href="#about" color="inherit">About</Link>
+        <Link href="#contact" color="inherit">Contacto</Link>
+      </Links>
+      <Typography variant="body2">Copyright ©2024; By Dimas Arturo Lopez Montalvo with REACT.JS</Typography>
     </FooterContainer>
   );
 };

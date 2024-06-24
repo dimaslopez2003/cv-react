@@ -12,12 +12,12 @@ const ProfileContainer = styled(Paper)({
   padding: '20px',
   textAlign: 'center',
   maxWidth: '600px',
-  margin: '0 auto',
+  margin: '0 auto 20px',
   backgroundColor: '#fff',
   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
   zIndex: 2, // Asegura que la tarjeta esté por encima del slider
   position: 'relative', // Necesario para el zIndex
-  marginTop: '-80px', // Ajusta el margen superior según sea necesario
+  marginTop: '-50px', // Ajusta el margen superior según sea necesario
 });
 
 const ProfileAvatar = styled(Avatar)({
@@ -41,8 +41,8 @@ const MainContainer = styled(Box)({
 
 const ContentContainer = styled(Box)({
   flexGrow: 1,
-  paddingBottom: '50px', // Añadir padding inferior para asegurar separación
-  position: 'relative', // Necesario para el zIndex
+  paddingBottom: '50px', 
+  position: 'relative',
 });
 
 const ProfileCard: React.FC = () => {
@@ -55,6 +55,7 @@ const ProfileCard: React.FC = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            mt: -6, // Ajusta el margen superior para reducir el espacio
           }}
         >
           <ProfileContainer id="profile">
@@ -80,7 +81,9 @@ const ProfileCard: React.FC = () => {
               </Grid>
             </Grid>
           </ProfileContainer>
-          <AboutMe />
+          <Box mt={4}> {/* Ajusta el margen superior para AboutMe */}
+            <AboutMe />
+          </Box>
         </Box>
       </ContentContainer>
     </MainContainer>
