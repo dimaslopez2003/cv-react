@@ -81,10 +81,9 @@ const Education: React.FC = () => {
                   <Avatar alt="Master of Science" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSta43TW66vDSraDWps2BX3Z4WFmZtwmrtzyg&s" />
                 </AvatarContainer>
                 <Box mt={4}>
-                  <Typography variant="h6">Master of Science in Software Engineering</Typography>
-                  <Typography variant="subtitle1">Example Institute of Technology</Typography>
-                  <Typography variant="body2">2019 - 2021</Typography>
-                  <Typography variant="body2">Focused on advanced software development methodologies, project management, and cloud computing.</Typography>
+                  <Typography variant="h6">TECNICO EN SOPORTE Y MANTENIMIENTO DE EQUIPOS DE CÓMPUTO</Typography>
+                  <Typography variant="subtitle1">CECYTE PLANTEL CANCÚN 2</Typography>
+                  <Typography variant="body2">2018 - 2021</Typography>
                 </Box>
               </EducationItem>
             </Grid>
