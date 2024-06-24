@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText, Typography } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText, Typography, ListItemIcon } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
+import SchoolIcon from '@mui/icons-material/School';
+import WorkIcon from '@mui/icons-material/Work';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import StarIcon from '@mui/icons-material/Star';
 import { Link } from 'react-router-dom';
 import { Box } from '@mui/system';
 
@@ -21,11 +26,12 @@ const Header: React.FC = () => {
   };
 
   const menuItems = [
-    { text: 'Educacion', path: '/Educacion' },
-    { text: 'Experiencia', path: '/Experiencia' },
-    { text: 'Skills', path: '/Skills' },
-    { text: 'Certificados', path: '/Certificados' },
-    { text: 'Contacto', path: '/Contacto' },
+    { text: 'Home', path: '/', icon: <HomeIcon /> },
+    { text: 'Educacion', path: '/Educacion', icon: <SchoolIcon /> },
+    { text: 'Experiencia', path: '/Experiencia', icon: <WorkIcon /> },
+    { text: 'Skills', path: '/Skills', icon: <StarIcon /> },
+    { text: 'Certificados', path: '/Certificados', icon: <EmojiEventsIcon /> },
+    { text: 'Contacto', path: '/Contacto', icon: <ContactMailIcon /> },
   ];
 
   const list = () => (
@@ -38,6 +44,7 @@ const Header: React.FC = () => {
       <List>
         {menuItems.map((item, index) => (
           <ListItem button component={Link} to={item.path} key={index}>
+            <ListItemIcon>{item.icon}</ListItemIcon>
             <ListItemText primary={item.text} />
           </ListItem>
         ))}
