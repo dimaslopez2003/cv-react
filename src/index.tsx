@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Educacion from './Componentes/Educacion';
 import Experiencia from './Componentes/Experiencia';
+import Skills from './Componentes/Skills';
 
 const basename = '/cv-react'; // Cambia esto por el nombre de tu repositorio
 
@@ -20,6 +21,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="Educacion" element={<Educacion />} />
         <Route path="Experiencia" element={<Experiencia />} />
+        <Route path="Skills" element={<Skills />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

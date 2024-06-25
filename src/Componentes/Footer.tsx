@@ -23,7 +23,9 @@ const SocialMediaIcons = styled(Box)(({ theme }) => ({
   gap: '15px',
   marginBottom: '10px',
   [theme.breakpoints.down('sm')]: {
-    flexDirection: 'column',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
     gap: '10px',
   },
 }));
@@ -33,27 +35,30 @@ const Links = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   gap: '20px',
   marginBottom: '10px',
-  [theme.breakpoints.down('sm')]: {
-    flexDirection: 'column',
-    gap: '10px',
+  flexDirection: 'column', // Colocar enlaces en columna por defecto
+  [theme.breakpoints.up('sm')]: {
+    flexDirection: 'row', // Cambiar a fila en pantallas más grandes
   },
 }));
 
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
-      <SocialMediaIcons>
-        <IconButton href="https://www.facebook.com/arturo.montalvo.3954" sx={{ color: '#fff' }}><FacebookIcon /></IconButton>
-        <IconButton href="https://www.instagram.com/arturomontalvo2003/" sx={{ color: '#fff' }}><InstagramIcon /></IconButton>
-        <IconButton href="https://www.linkedin.com/in/dimas-arturo-l%C3%B3pez-montalvo-7701bb285/" sx={{ color: '#fff' }}><LinkedInIcon /></IconButton>
-        <IconButton href="#" sx={{ color: '#fff' }}><WhatsAppIcon /></IconButton>
-      </SocialMediaIcons>
-      <Links>
-        <Link href="/" color="inherit">Home</Link>
-        <Link href="#about" color="inherit">About</Link>
-        <Link href="#contact" color="inherit">Contacto</Link>
-      </Links>
-      <Typography variant="body2">Copyright ©2024; By Dimas Arturo Lopez Montalvo with REACT.JS</Typography>
+      <Grid container spacing={2} justifyContent="center">
+        <Grid item xs={12}>
+          <SocialMediaIcons>
+            <IconButton href="https://www.facebook.com/arturo.montalvo.3954" sx={{ color: '#fff' }}><FacebookIcon /></IconButton>
+            <IconButton href="https://www.instagram.com/arturomontalvo2003/" sx={{ color: '#fff' }}><InstagramIcon /></IconButton>
+            <IconButton href="https://www.linkedin.com/in/dimas-arturo-l%C3%B3pez-montalvo-7701bb285/" sx={{ color: '#fff' }}><LinkedInIcon /></IconButton>
+            <IconButton href="#" sx={{ color: '#fff' }}><WhatsAppIcon /></IconButton>
+          </SocialMediaIcons>
+        </Grid>
+        <Grid item xs={12}>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="body2">Copyright ©2024; By Dimas Arturo Lopez Montalvo with REACT.JS</Typography>
+        </Grid>
+      </Grid>
     </FooterContainer>
   );
 };

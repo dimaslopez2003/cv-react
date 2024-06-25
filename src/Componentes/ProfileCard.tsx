@@ -67,7 +67,7 @@ const ProfileCard: React.FC = () => {
                 <Typography variant="h4">Dimas Arturo López Montalvo</Typography>
                 <Typography variant="subtitle1">Web Developer and IT Support Jr</Typography>
                 <Box mt={2} textAlign="left" sx={{ px: 2 }}>
-                  <Typography variant="body2"><strong>Phone:</strong> +52 9981862431</Typography>
+                  <Typography variant="body2"><strong>Celular:</strong> +52 9981862431</Typography>
                   <Typography variant="body2"><strong>Email:</strong> montalcoarturo@gmail.com</Typography>
                   <Typography variant="body2"><strong>Dirección:</strong> Region 516 MZ28 LT7 Calle 34-A</Typography>
                   <Typography variant="body2"><strong>Fecha de nacimiento:</strong> 18 de mayo del 2003</Typography>
