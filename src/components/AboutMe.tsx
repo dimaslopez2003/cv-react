@@ -7,7 +7,7 @@ const AboutContainer = styled(Box)({
   textAlign: 'center',
   backgroundColor: '#fff',
   color: '#000',
-  marginTop: '20px', // Ajustar el margen superior para separar del ProfileCard
+  marginTop: '20px',
 });
 
 const AboutText = styled(Typography)({
@@ -15,7 +15,7 @@ const AboutText = styled(Typography)({
   maxWidth: '800px',
   margin: '0 auto',
   '@media (max-width: 600px)': {
-    padding: '0 20px', // Añadir padding lateral en móviles
+    padding: '0 20px',
   },
 });
 
