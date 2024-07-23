@@ -8,7 +8,6 @@ import Educacion from "./pages/Educacion";
 import Experiencia from "./pages/Experiencia";
 import Skills from "./pages/Skills";
 import Certificados from "./pages/Certificados";
-import Contacto from "./pages/Contacto";
 
 const basename = "/cv-react"; // Cambia esto por el nombre de tu repositorio
 
@@ -25,7 +24,6 @@ root.render(
         <Route path="Experiencia" element={<Experiencia />} />
         <Route path="Skills" element={<Skills />} />
         <Route path="Certificados" element={<Certificados />} />
-        <Route path="Contacto" element={<Contacto />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

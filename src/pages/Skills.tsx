@@ -3,6 +3,7 @@ import { Box, Typography, Paper, Grid, Avatar } from "@mui/material";
 import { styled } from "@mui/system";
 import Footer from "../layout/Footer";
 import Header from "../layout/Header";
+import SliderSkills from "../components/SliderSkills"; // Asegúrate de que la ruta es correcta
 
 const SkillsContainer = styled(Box)({
   padding: "20px",
@@ -20,7 +21,7 @@ const SkillItem = styled(Paper)({
   position: "relative",
   backgroundColor: "#f5f5f5",
   color: "#000",
-  minHeight: "200px",
+  minHeight: "300px",
 });
 
 const AvatarContainer = styled(Box)({
@@ -28,6 +29,12 @@ const AvatarContainer = styled(Box)({
   top: "-30px",
   left: "50%",
   transform: "translateX(-50%)",
+});
+
+const StyledAvatar = styled(Avatar)({
+  width: "50px",
+  height: "50px",
+  margin: "5px",
 });
 
 const MainContainer = styled(Box)({
@@ -56,8 +63,8 @@ const Skills: React.FC = () => {
             <Grid item xs={12} md={4}>
               <SkillItem>
                 <AvatarContainer>
-                  <Avatar src="https://icorp.com.mx/wp-content/uploads/2015/05/Enlaces-telecomunicaciones-y-redes-scaled.webp" />
-                  <Avatar src="https://i0.wp.com/appix.mx/wp-content/uploads/2022/08/image-6.png?resize=482%2C296&ssl=1" />
+                  <StyledAvatar src="https://icorp.com.mx/wp-content/uploads/2015/05/Enlaces-telecomunicaciones-y-redes-scaled.webp" />
+                  <StyledAvatar src="https://i0.wp.com/appix.mx/wp-content/uploads/2022/08/image-6.png?resize=482%2C296&ssl=1" />
                 </AvatarContainer>
                 <Box mt={4}>
                   <Typography variant="h6" sx={{ fontSize: "1.2rem" }}>
@@ -71,13 +78,14 @@ const Skills: React.FC = () => {
                     audiovisuales y cámaras de seguridad.
                   </Typography>
                 </Box>
+                <SliderSkills />
               </SkillItem>
             </Grid>
             <Grid item xs={12} md={4}>
               <SkillItem>
                 <AvatarContainer>
-                  <Avatar src="https://peopleworks.com.do/wp-content/uploads/2023/11/azure-sql-database6354.jpg" />
-                  <Avatar src="https://aspnetcoremaster.com/img/csharp.webp" />
+                  <StyledAvatar src="https://peopleworks.com.do/wp-content/uploads/2023/11/azure-sql-database6354.jpg" />
+                  <StyledAvatar src="https://aspnetcoremaster.com/img/csharp.webp" />
                 </AvatarContainer>
                 <Box mt={4}>
                   <Typography variant="h6" sx={{ fontSize: "1.2rem" }}>
@@ -89,13 +97,14 @@ const Skills: React.FC = () => {
                     relacionales con MongoDB y FireBase.
                   </Typography>
                 </Box>
+                <SliderSkills />
               </SkillItem>
             </Grid>
             <Grid item xs={12} md={4}>
               <SkillItem>
                 <AvatarContainer>
-                  <Avatar src="https://cdn.worldvectorlogo.com/logos/react-1.svg" />
-                  <Avatar src="https://cdn-icons-png.flaticon.com/512/919/919832.png" />
+                  <StyledAvatar src="https://cdn.worldvectorlogo.com/logos/react-1.svg" />
+                  <StyledAvatar src="https://cdn-icons-png.flaticon.com/512/919/919832.png" />
                 </AvatarContainer>
                 <Box mt={4}>
                   <Typography variant="h6" sx={{ fontSize: "1.2rem" }}>
@@ -105,6 +114,7 @@ const Skills: React.FC = () => {
                     Conocimientos en HTML, CSS, Typescrip, React y React Native.
                   </Typography>
                 </Box>
+                <SliderSkills />
               </SkillItem>
             </Grid>
           </Grid>

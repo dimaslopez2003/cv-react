@@ -20,7 +20,6 @@ import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
 import BuildIcon from "@mui/icons-material/Build";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import { Link } from "react-router-dom";
 import ReactLogo from "../components/ReactLogo"; // Importa el nuevo componente
@@ -30,7 +29,6 @@ const data = [
   { icon: <WorkIcon />, label: "Experiencia", path: "/Experiencia" },
   { icon: <BuildIcon />, label: "Skills", path: "/Skills" },
   { icon: <VerifiedIcon />, label: "Certificados", path: "/Certificados" },
-  { icon: <ContactMailIcon />, label: "Contacto", path: "/Contacto" },
 ];
 
 const Header: React.FC = () => {
