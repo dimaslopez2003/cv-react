@@ -132,7 +132,7 @@ const Experience: React.FC = () => {
                 <AvatarContainer>
                   <Avatar
                     alt="Junior Developer"
-                    src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.6435-9/117039480_157639029322517_5852190968113839098_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeG2Nj6TLW82B8SELZztvY5qIy0UZDFgR3AjLRRkMWBHcBp4dEkX4zmnHRv-mBLzQVXWhFAq6euPqwFWjdRgl652&_nc_ohc=vYwzc0d3BMAQ7kNvgEzOidb&_nc_ht=scontent-mia3-1.xx&oh=00_AYCKrQqhu08nhoaYJAzytdsylFWE-zpobTn2t2zvU1bUFQ&oe=66A19FB5"
+                    src="https://scontent.fcjs3-1.fna.fbcdn.net/v/t1.6435-9/117039480_157639029322517_5852190968113839098_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG2Nj6TLW82B8SELZztvY5qIy0UZDFgR3AjLRRkMWBHcBp4dEkX4zmnHRv-mBLzQVXWhFAq6euPqwFWjdRgl652&_nc_ohc=s7FuFcK1l5cQ7kNvgHehTxe&_nc_ht=scontent.fcjs3-1.fna&oh=00_AYAyNBcR5TuPrT0p3SDTV5oDV1JS8XdvT7IEgtl-ZuOLYg&oe=66CB9775"
                   />
                 </AvatarContainer>
                 <Box mt={4}>

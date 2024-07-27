@@ -3,7 +3,10 @@ import { Box, Typography, Paper, Grid, Avatar } from "@mui/material";
 import { styled } from "@mui/system";
 import Footer from "../layout/Footer";
 import Header from "../layout/Header";
-import SliderSkills from "../components/SliderSkills"; // Asegúrate de que la ruta es correcta
+import SliderSkills from "../components/SliderSkills";
+import imagesSystems from "../data/imagecertificate";
+import imagesBackend from "../data/imagesBackend";
+import imagesFrontend from "../data/imagesFrontend";
 
 const SkillsContainer = styled(Box)({
   padding: "20px",
@@ -21,20 +24,22 @@ const SkillItem = styled(Paper)({
   position: "relative",
   backgroundColor: "#f5f5f5",
   color: "#000",
-  minHeight: "300px",
+  minHeight: "400px",
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
 });
 
 const AvatarContainer = styled(Box)({
-  position: "absolute",
-  top: "-30px",
-  left: "50%",
-  transform: "translateX(-50%)",
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '10px',
+  marginTop: '-30px',
 });
 
 const StyledAvatar = styled(Avatar)({
   width: "50px",
   height: "50px",
-  margin: "5px",
 });
 
 const MainContainer = styled(Box)({
@@ -78,7 +83,7 @@ const Skills: React.FC = () => {
                     audiovisuales y cámaras de seguridad.
                   </Typography>
                 </Box>
-                <SliderSkills />
+                <SliderSkills images={imagesSystems} />
               </SkillItem>
             </Grid>
             <Grid item xs={12} md={4}>
@@ -97,7 +102,7 @@ const Skills: React.FC = () => {
                     relacionales con MongoDB y FireBase.
                   </Typography>
                 </Box>
-                <SliderSkills />
+                <SliderSkills images={imagesBackend} />
               </SkillItem>
             </Grid>
             <Grid item xs={12} md={4}>
@@ -114,7 +119,7 @@ const Skills: React.FC = () => {
                     Conocimientos en HTML, CSS, Typescrip, React y React Native.
                   </Typography>
                 </Box>
-                <SliderSkills />
+                <SliderSkills images={imagesFrontend} />
               </SkillItem>
             </Grid>
           </Grid>
