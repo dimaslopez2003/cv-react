@@ -7,6 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import ImageSlider from './ImageSlider';
 import AboutMe from './AboutMe';
+import { Instagram } from '@mui/icons-material';
 
 const ProfileContainer = styled(Paper)({
   padding: '20px',
@@ -73,10 +74,9 @@ const ProfileCard: React.FC = () => {
                   <Typography variant="body2"><strong>Fecha de nacimiento:</strong> 18 de mayo del 2003</Typography>
                 </Box>
                 <SocialMediaIcons>
-                  <IconButton href="#"><LinkedInIcon /></IconButton>
-                  <IconButton href="#"><TwitterIcon /></IconButton>
-                  <IconButton href="#"><GitHubIcon /></IconButton>
-                  <IconButton href="#"><EmailIcon /></IconButton>
+                  <IconButton href="https://www.linkedin.com/in/dimas-arturo-l%C3%B3pez-montalvo-7701bb285/"><LinkedInIcon /></IconButton>
+                  <IconButton href="https://github.com/dimaslopez2003"><GitHubIcon /></IconButton>
+                  <IconButton href="https://www.instagram.com/arturomontalvo2003/"><Instagram /></IconButton>
                 </SocialMediaIcons>
               </Grid>
             </Grid>
