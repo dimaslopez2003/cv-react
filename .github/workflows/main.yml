@@ -1,1 +1,28 @@
+name: Clone and Install
 
+on:
+  push:
+    branches:
+      - main  # Ejecutar el workflow cuando se haga push a la rama "main"
+  workflow_dispatch:  # Permite ejecutar el workflow manualmente desde la interfaz de GitHub Actions
+
+jobs:
+  clone-and-install:
+    runs-on: ubuntu-latest  # El workflow se ejecutará en una máquina virtual con Ubuntu
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2  # Usa la acción de GitHub para clonar el repositorio
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2  # Configura Node.js
+      with:
+        node-version: '14'  # Puedes cambiar la versión de Node.js si es necesario
+
+    - name: Install dependencies
+      run: npm install  # Comando para instalar las dependencias
+
+    - name: Run build (optional)
+      run: npm run build  # Comando opcional para construir el proyecto, si tienes un script "build" en package.json
+
+    #
