@@ -20,7 +20,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3  # Configura la última versión de Node.js
       with:
-        node-version: '20'  # Usa la versión más reciente de Node.js (o '16' si prefieres)
+        node-version: '20.18.0'  # Usa la versión más reciente de Node.js (o '16' si prefieres)
 
     # 3. Instalar las dependencias
     - name: Install dependencies
