@@ -1,28 +1,38 @@
-name: Clone and Install
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Ejecutar el workflow cuando se haga push a la rama "main"
-  workflow_dispatch:  # Permite ejecutar el workflow manualmente desde la interfaz de GitHub Actions
+      - main  # Se ejecuta cuando hay un push a la rama "main"
+
+  workflow_dispatch:  # Permite ejecutar el flujo manualmente desde la interfaz de GitHub Actions
 
 jobs:
-  clone-and-install:
-    runs-on: ubuntu-latest  # El workflow se ejecutará en una máquina virtual con Ubuntu
+  build-and-deploy:
+    runs-on: ubuntu-latest  # Ejecuta en una máquina virtual de Ubuntu
 
     steps:
+    # 1. Clonar el repositorio
     - name: Check out the repository
-      uses: actions/checkout@v2  # Usa la acción de GitHub para clonar el repositorio
+      uses: actions/checkout@v3  # Usa la última versión de la acción para clonar el repo
 
+    # 2. Configurar Node.js
     - name: Set up Node.js
-      uses: actions/setup-node@v2  # Configura Node.js
+      uses: actions/setup-node@v3  # Configura la última versión de Node.js
       with:
-        node-version: '14'  # Puedes cambiar la versión de Node.js si es necesario
+        node-version: '20'  # Usa la versión más reciente de Node.js (o '16' si prefieres)
 
+    # 3. Instalar las dependencias
     - name: Install dependencies
-      run: npm install  # Comando para instalar las dependencias
+      run: npm install
 
-    - name: Run build (optional)
-      run: npm run build  # Comando opcional para construir el proyecto, si tienes un script "build" en package.json
+    # 4. Ejecutar el build
+    - name: Build the project
+      run: npm run build  # Este comando genera la carpeta 'build' para GitHub Pages
 
-    #
+    # 5. Desplegar en GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3  # Usa la acción para desplegar en GitHub Pages
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # Token que permite realizar cambios en el repositorio
+        publish_dir: ./build  # Directorio que contiene los archivos de la aplicación (carpeta 'build' generada)
